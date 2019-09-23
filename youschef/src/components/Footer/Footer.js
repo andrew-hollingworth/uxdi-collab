@@ -4,7 +4,7 @@ import './Footer.css'
 export default function Footer() {
   return (
     <div>
-      <h1>This is a footer</h1>
+      <h4><i className="fab fa-instagram"></i> <i className="fab fa-facebook-square"></i> <i className="fab fa-twitter-square"></i> </h4>
     </div>
   )
 }
