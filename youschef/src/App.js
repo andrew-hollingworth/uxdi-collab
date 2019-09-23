@@ -1,19 +1,43 @@
-import React from 'react';
-import { Router, Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Switch, Route, Link } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Delivery from './components/Delivery/Delivery'
+import OrderForm from './components/OrderForm/OrderForm'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-        <Footer />
-      </header>
-    </div>
-  );
-}
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      meals: {
+        chickenParm: {
+          chickenBreast: true,
+          spaghetti: true,
+          sauce: true
+        },
+        eggplantParm: {
+          eggplant: true,
+          spaghetti: true,
+          sauce: true,
+        },
+      },
+    }
+  }
 
-export default App;
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route path='/delivery' component={Delivery} />
+          <Route path='/order' render={() =>
+            <OrderForm
+              meals={this.state.meals} />} />
+        </Switch>
+        <Footer />
+      </div>
+    )
+  }
+}
