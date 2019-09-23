@@ -1,0 +1,70 @@
+.recipeContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.singleRecipeContainer {
+  /* border: 1px solid black; */
+  position: relative;
+  height: 230px;
+  width: 345px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569277230/CaesarSaladSmall_hnuz49.jpg');
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.recipeNameContainer {
+  /* border: 1px solid black;
+  margin-top: 15px; */
+  position: absolute;
+  right: 0;
+  margin-top: 15px;
+  height: 39px;
+  width: 330px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.recipeName {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 0 8px;
+  padding-top: 2px;
+}
+.fa-stopwatch:before {
+  font-size: 30px;
+  margin-right: 25px;
+  margin-top: 20px;
+}
+.fa-stopwatch {
+  margin-top: 5px;
+}
+.customizeButton {
+  /* border: 1px solid red; */
+  color: white;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  border-radius: 70px;
+  background-color: rgba(98, 136, 148, 0.9);
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+  height: 44px;
+  width: 149px;
+}
+.scheduleButton {
+  border: 1px solid black;
+  height: 54px;
+  width: 258px;
+  border-radius: 70px;
+  background-color: #31464d;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
