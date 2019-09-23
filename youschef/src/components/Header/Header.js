@@ -4,7 +4,12 @@ import './Header.css'
 export default function Header() {
   return (
     <div>
-      <h1>This is a header.</h1>
+      <ul>
+        <li>Logo</li>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
     </div>
   )
 }
