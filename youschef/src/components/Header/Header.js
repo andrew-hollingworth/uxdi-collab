@@ -3,12 +3,11 @@ import './Header.css'
 
 export default function Header() {
   return (
-    <div>
-      <ul>
-        <li>Logo</li>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
+    <div className="headerContainer">
+      <ul className="headerUl">
+        <li className="headerLi">Logo</li>
+        <li className="headerLi"><i class="fas fa-shopping-cart"></i>
+Download SVGPerfect for when you want to use just one icon as a vector on the desktop or in your own icon workflow.</li>
       </ul>
     </div>
   )
