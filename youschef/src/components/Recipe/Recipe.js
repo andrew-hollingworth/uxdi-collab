@@ -4,20 +4,20 @@ import './Recipe.css'
 
 export default function Recipe(props) {
   const pages = [
-    ({ style }) => <animated.div style={{ ...style, color: 'lightpink' }}>
+    ({ style }) => <animated.div>
       {<>
         <div className="recipeNameContainer">
           <h3 className="recipeName">Caesar Salad</h3>
           <i className="fas fa-stopwatch stopwatch"></i>
         </div>
-          <button onClick={() => props.handleAddToCart()} className="customizeButton">Customize ></button>
+        <button className="customizeButton" onClick={onClick}>Customize ></button>
       </>}
     </animated.div >,
     ({ style }) => <animated.div style={{ ...style, color: 'lightblue' }}>{<>
       <div className="ingredientsListContainer">
         <div className="ingredientsHeader">
           <h5>Caesar Salad</h5>
-          <i class="fas fa-times"></i>
+          <i onClick={onClick} class="fas fa-times"></i>
         </div>
         <div className="ingredientsList">
           <ul className="ingredientsUl">
@@ -28,7 +28,7 @@ export default function Recipe(props) {
             <li className="ingredientsLi">Dressing</li>
             <li className="ingredientsLi">Anchovies</li>
           </ul>
-          <button className="customizeIngredientsButton">Add to Cart <span className="plusSign">+</span></button>
+          <button className="customizeIngredientsButton" onClick={() => props.handleAddToCart()}>Add to Cart <span className="plusSign">+</span></button>
         </div>
       </div>
 
@@ -37,9 +37,9 @@ export default function Recipe(props) {
   const [index, set] = useState(0)
   const onClick = useCallback(() => set(state => (state + 1) % 2), [])
   const transitions = useTransition(index, p => p, {
-    from: { opacity: 0, transform: 'translate3d(0%,20px,0)' },
+    from: { opacity: 0, transform: 'translate3d(0%,0px,0)' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    leave: { opacity: 0, transform: 'translate3d(0%,20px,0)' },
+    leave: { opacity: 0, transform: 'translate3d(0%,0px,0)' },
   })
   return (
     <div className="recipeContainer">
