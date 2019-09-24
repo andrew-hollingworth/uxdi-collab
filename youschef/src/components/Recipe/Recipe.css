@@ -14,7 +14,7 @@
   background-position: cover;
   background-repeat: no-repeat;
   background-size: auto;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2)
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
 }
 .recipeNameContainer {
   /* border: 1px solid black;
@@ -134,17 +134,17 @@
   display: none;
 }
 .ingredientsListContainer {
-  border: 1px solid black;
-  height: 230px;
+  height: 215px;
   width: 330px;
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
   margin: 0;
   position: absolute;
-  top: 0;
+  top: 15px;
   right: 0;
-  left: 0;
   bottom: 0;
+  border-radius: 5px;
+  border-bottom-right-radius: 15px;
 }
 .ingredientsHeader {
   display: flex;
@@ -160,7 +160,7 @@ h5 {
   flex-flow: column;
   flex-wrap:wrap;
   height: 120px;
-  padding: 0;
+  padding: 0 0 3px 0;
 }
 .ingredientsLi {
   list-style-type: none;
@@ -179,23 +179,21 @@ h5 {
   font-size: 22px;
   letter-spacing: 2.2px;
   border-radius: 70px;
-  background-color: rgba(98, 136, 148, 0.9);
+  background-color: rgb(98, 136, 148);
   height: 44px;
   width: 208px;
-  margin-left: 120px;
+  margin-left: 118px;
+  position: absolute;
+  bottom: 7px;
 }
 .plusSign {
   font-size: 25px;
 }
-/* .ingredientsEffect {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: white;
-} */
-
+.cancel {
+  margin-right: 28px;
+  margin-top: 7px;
+  cursor: pointer;
+}
 
 @media (min-width: 768px) {
   .desktopMainPic {
