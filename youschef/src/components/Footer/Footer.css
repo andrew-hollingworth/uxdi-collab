@@ -16,3 +16,9 @@
 .socialIcon:last-of-type {
   margin-right: 0;
 }
+
+@media (min-width: 768px) {
+  .socialIcon {
+    font-size: 20px;
+  }
+}

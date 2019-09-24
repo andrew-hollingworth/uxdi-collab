@@ -19,6 +19,8 @@ export default function Recipe() {
 
       <h2 className="chooseIngredients">Choose Your Ingredients:</h2>
     {/* BELOW IS FIRST RECIPE CONTAINER */}
+    <div className="recipesContainer">
+
       <div className="singleRecipeContainer">
         <div className="recipeNameContainer">
           <h3 className="recipeName">Caesar Salad</h3>
@@ -44,6 +46,8 @@ export default function Recipe() {
         </div>
         <button className="customizeButton">Customize ></button>
       </div>
+
+    </div>
 
 
       <button className="scheduleButton">Schedule Delivery</button>
