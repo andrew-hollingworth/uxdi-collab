@@ -130,20 +130,23 @@
   z-index: -1;
 }
 .desktopMainPic {
-  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569325215/jason-briscoe-5IGprlBT5g4-unsplash_dhgjfl.jpg');
+  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569336059/BannerPic_duq5fo.jpg');
   display: none;
 }
 
-
+/* 337px */
 
 @media (min-width: 768px) {
   .desktopMainPic {
     display: block;
     border: 1px solid black;
-    /* height: 300px; */
-    height: 500px;
+    height: 350px;
+    /* height: 500px; */
     width: 100%;
     background-repeat: no-repeat;
-    background-position: contain;
+    background-position: cover;
+  }
+  .progressBarContainer {
+    /* max-width: 337px; */
   }
 }
