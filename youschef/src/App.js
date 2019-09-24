@@ -10,31 +10,28 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      meals: {
-        chickenParm: {
-          chickenBreast: true,
-          spaghetti: true,
-          sauce: true
-        },
-        eggplantParm: {
-          eggplant: true,
-          spaghetti: true,
-          sauce: true,
-        },
-      },
+      cartCounter: null,
     }
+  }
+
+  handleAddToCart = () => {
+    let newState = this.state.cartCounter + 1
+    this.setState(prevState => ({
+      cartCounter: newState,
+    }))
   }
 
 
   render() {
     return (
       <div>
-        <Header />
+        <Header
+          cartCounter={this.state.cartCounter} />
         <Switch>
           <Route path='/delivery' component={Delivery} />
           <Route path='/order' render={() =>
             <OrderForm
-              meals={this.state.meals} />} />
+              handleAddToCart={this.handleAddToCart} />} />
         </Switch>
         <Footer />
       </div>
