@@ -66,7 +66,7 @@
     color 0.3s;
 }
 .scheduleButton {
-  border: 1px solid black;
+  border: none;
   height: 54px;
   width: 258px;
   border-radius: 70px;
@@ -105,7 +105,7 @@
 .progressCircle {
   height: 60px;
   width: 60px;
-  border: 2px dotted black;
+  border: 2px dotted #628894;
   border-radius: 100%;
   line-height: 60px;
   text-align: center;
