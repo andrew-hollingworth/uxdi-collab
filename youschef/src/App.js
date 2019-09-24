@@ -10,18 +10,13 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      meals: {
-        chickenParm: {
-          chickenBreast: true,
-          spaghetti: true,
-          sauce: true
-        },
-        eggplantParm: {
-          eggplant: true,
-          spaghetti: true,
-          sauce: true,
-        },
-      },
+      ingredients: [{
+        name: 'Chicken Breast',
+        value: true,
+      }, {
+        name: 'Spaghetti',
+
+      }]
     }
   }
 
