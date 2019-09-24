@@ -202,14 +202,22 @@ h5 {
     width: 100%;
     background-repeat: no-repeat;
     background-position: cover;
+      box-shadow: 2px 4px 25px rgba(0, 0, 0, .2)
+  }
+  .progressCircle {
+    height: 76px;
+    width: 76px;
+    border-radius: 100%;
+    line-height: 76px;
   }
   .progressBarContainer {
     max-width: 337px;
     margin: 36px auto 0 auto;
+    font-size: 17px;
   }
   .progressBarContainer:after {
     width: 18%;
-    top: 474px;
+    top: 482px;
     right: 580px;
   }
   .recipesContainer {
