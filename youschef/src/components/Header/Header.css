@@ -5,6 +5,7 @@ body {
 }
 .headerContainer {
   height: 57px;
+  /* box-shadow: 2px 4px 25px rgba(0, 0, 0, .1) */
 }
 .profile {
   font-size: 36px;
