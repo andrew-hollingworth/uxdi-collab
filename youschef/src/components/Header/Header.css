@@ -14,9 +14,16 @@ body {
 .cart {
   font-size: 25px;
   margin-right: 10px;
+  color: #304248;
+}
+.cartNumber {
+  font-family: Montserrat;
+  font-size: 20px;
+  vertical-align: .9em;
 }
 .fa-user-circle:before {
   line-height: 57px;
+  color: #304248;
 }
 .headerUl {
   /* border: 1px solid black; */
@@ -44,4 +51,25 @@ body {
   font-size: 30px;
   color: #304248;
   vertical-align: sub;
+}
+
+@media (min-width: 768px) {
+  .headerUl{
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .user {
+    font-size: 32px;
+    order: 2;
+    margin-left: 1180px;
+    align-self: center;
+  }
+  .logo {
+    order: 1;
+    justify-self: flex-start;
+  }
+  .cart {
+    order: 3;
+    justify-self: flex-end;
+  }
 }
