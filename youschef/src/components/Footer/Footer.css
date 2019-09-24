@@ -1,0 +1,17 @@
+.footer {
+  position: relative;
+  margin-top: 18px;
+  height: 43px;
+  line-height: 43px;
+  width: 100%;
+  text-align: center;
+  background-color: #628894;
+}
+.socialIcon {
+  font-size: 15px;
+  color: white;
+  margin-right: 7px;
+}
+.socialIcon:last-of-type {
+  margin-right: 0;
+}
