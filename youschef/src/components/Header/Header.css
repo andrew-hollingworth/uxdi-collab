@@ -1,18 +1,40 @@
-.headerLogoCart {
-  border: 1px solid red;
-  position: absolute;
-  top: 0;
-  width: 100%;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,700,800,800i&display=swap');
+
+body {
+  font-family: Montserrat;
+}
+.headerContainer {
+  height: 57px;
+}
+.profile {
+  font-size: 36px;
+  margin-left: 10px;
+}
+.cart {
+  font-size: 25px;
+  margin-right: 10px;
+}
+.fa-user-circle:before {
+  line-height: 57px;
 }
 .headerUl {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   list-style-type: none;
   justify-content: space-between;
   position: absolute;
   top: 0;
+  height: 57px;
   width: 100%;
+  padding: 0;
+  margin: 7px 0 0 0;
+  line-height: 57px;
 }
 .headerLi {
-  border: 1px solid green;
+  /* border: 1px solid green; */
+  font-weight: 800;
+  font-size: 20;
+}
+.headerLi:nth-of-type(2) {
+  color: #628894;
 }

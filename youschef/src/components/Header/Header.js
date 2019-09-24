@@ -5,9 +5,9 @@ export default function Header() {
   return (
     <div className="headerContainer">
       <ul className="headerUl">
-        <li className="headerLi">Logo</li>
-        <li className="headerLi"><i class="fas fa-shopping-cart"></i>
-Download SVGPerfect for when you want to use just one icon as a vector on the desktop or in your own icon workflow.</li>
+        <li className="headerLi"><i class="fas fa-user-circle profile"></i></li>
+        <li className="headerLi">Yous Chef</li>
+        <li className="headerLi"><i class="fas fa-shopping-cart cart"></i></li>
       </ul>
     </div>
   )
