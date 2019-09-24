@@ -6,6 +6,7 @@
   width: 100%;
   text-align: center;
   background-color: #628894;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2)
 }
 .socialIcon {
   font-size: 15px;

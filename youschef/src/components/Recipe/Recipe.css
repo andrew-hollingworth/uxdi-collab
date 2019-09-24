@@ -14,6 +14,7 @@
   background-position: cover;
   background-repeat: no-repeat;
   background-size: auto;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2)
 }
 .recipeNameContainer {
   /* border: 1px solid black;
@@ -67,6 +68,7 @@
   letter-spacing: 2px;
   margin-top: 20px;
   margin-left: 50px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2)
 }
 .chooseIngredients {
   font-size: 24px;
@@ -92,7 +94,7 @@
   line-height: 60px;
   text-align: center;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 700;
   background-color: white;
 }
 .progressCircle:first-of-type {
@@ -110,4 +112,22 @@
   top: 119px;
   background-color: black;
   z-index: -1;
+}
+.desktopMainPic {
+  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569325215/jason-briscoe-5IGprlBT5g4-unsplash_dhgjfl.jpg');
+  display: none;
+}
+
+
+
+@media (min-width: 768px) {
+  .desktopMainPic {
+    display: block;
+    border: 1px solid black;
+    /* height: 300px; */
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: contain;
+  }
 }
