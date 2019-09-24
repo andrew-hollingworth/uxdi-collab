@@ -134,19 +134,33 @@
   display: none;
 }
 
-/* 337px */
 
 @media (min-width: 768px) {
   .desktopMainPic {
     display: block;
-    border: 1px solid black;
     height: 350px;
-    /* height: 500px; */
     width: 100%;
     background-repeat: no-repeat;
     background-position: cover;
   }
   .progressBarContainer {
-    /* max-width: 337px; */
+    max-width: 337px;
+    margin: 36px auto 0 auto;
+  }
+  .progressBarContainer:after {
+    width: 18%;
+    top: 474px;
+    right: 580px;
+  }
+  .recipesContainer {
+    display: flex;
+  }
+  .scheduleButton {
+    /* margin: 0 auto; */
+    /* margin-left: 600px; */
+    margin: 20px auto 20px 600px;
+  }
+  .chooseIngredients {
+    margin-left: 85px;
   }
 }
