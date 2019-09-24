@@ -140,6 +140,11 @@
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
   margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 .ingredientsHeader {
   display: flex;
@@ -182,6 +187,14 @@ h5 {
 .plusSign {
   font-size: 25px;
 }
+/* .ingredientsEffect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+} */
 
 
 @media (min-width: 768px) {
@@ -205,8 +218,6 @@ h5 {
     display: flex;
   }
   .scheduleButton {
-    /* margin: 0 auto; */
-    /* margin-left: 600px; */
     margin: 20px auto 20px 600px;
   }
   .chooseIngredients {
