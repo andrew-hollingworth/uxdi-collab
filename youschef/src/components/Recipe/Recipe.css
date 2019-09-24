@@ -56,6 +56,14 @@
   height: 44px;
   width: 149px;
 }
+.customizeButton:hover {
+  color: rgba(98, 136, 148, 0.9);
+  background-color: white;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
 .scheduleButton {
   border: 1px solid black;
   height: 54px;
@@ -67,6 +75,14 @@
   letter-spacing: 2px;
   margin-top: 20px;
   margin-left: 50px;
+}
+.scheduleButton:hover {
+  background-color: white;
+  color: #31464d;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 .chooseIngredients {
   font-size: 24px;
