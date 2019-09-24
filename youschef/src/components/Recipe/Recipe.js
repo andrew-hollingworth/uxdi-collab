@@ -14,9 +14,22 @@ export default function Recipe(props) {
       </>}
     </animated.div >,
     ({ style }) => <animated.div style={{ ...style, color: 'lightblue' }}>{<>
-      <div className="recipeNameContainer">
-        <h3 className="recipeName">Caesar Salad</h3>
-        <i className="fas fa-stopwatch stopwatch"></i>
+      <div className="ingredientsListContainer">
+        <div className="ingredientsHeader">
+          <h5>Caesar Salad</h5>
+          <i class="fas fa-times"></i>
+        </div>
+        <div className="ingredientsList">
+          <ul className="ingredientsUl">
+            <li className="ingredientsLi">Lettuce</li>
+            <li className="ingredientsLi">Crouton</li>
+            <li className="ingredientsLi">Parmesan</li>
+            <li className="ingredientsLi">Chicken</li>
+            <li className="ingredientsLi">Dressing</li>
+            <li className="ingredientsLi">Anchovies</li>
+          </ul>
+          <button className="customizeIngredientsButton">Add to Cart <span className="plusSign">+</span></button>
+        </div>
       </div>
 
     </>}</animated.div>
@@ -24,8 +37,9 @@ export default function Recipe(props) {
   const [index, set] = useState(0)
   const onClick = useCallback(() => set(state => (state + 1) % 2), [])
   const transitions = useTransition(index, p => p, {
-    from: { opacity: 0, transform: 'translate3d(0%, 300px,0)' },
+    from: { opacity: 0, transform: 'translate3d(0%,20px,0)' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
+    leave: { opacity: 0, transform: 'translate3d(0%,20px,0)' },
   })
   return (
     <div className="recipeContainer">
@@ -74,27 +88,6 @@ export default function Recipe(props) {
           <button onClick={() => props.handleAddToCart()} className="customizeButton">Customize ></button>
         </div>
       </div>
-
-
-    </div>
-
-    <div className="ingredientsListContainer">
-      <div className="ingredientsHeader">
-        <h5>Caesar Salad</h5>
-        <i class="fas fa-times"></i>
-      </div>
-      <div className="ingredientsList">
-        <ul className="ingredientsUl">
-          <li className="ingredientsLi">Lettuce</li>
-          <li className="ingredientsLi">Crouton</li>
-          <li className="ingredientsLi">Parmesan</li>
-          <li className="ingredientsLi">Chicken</li>
-          <li className="ingredientsLi">Dressing</li>
-          <li className="ingredientsLi">Anchovies</li>
-        </ul>
-        <button className="customizeIngredientsButton">Add to Cart <span className="plusSign">+</span></button>
-      </div>
-    </div>
 
       <button className="scheduleButton">Schedule Delivery</button>
     </div>
