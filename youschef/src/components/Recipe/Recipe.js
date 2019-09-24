@@ -76,7 +76,7 @@ export default function Recipe(props) {
       </div>
 
 
-    </div>
+
 
     <div className="ingredientsListContainer">
       <div className="ingredientsHeader">
