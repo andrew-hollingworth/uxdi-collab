@@ -10,7 +10,7 @@ export default function Recipe(props) {
           <h3 className="recipeName">Caesar Salad</h3>
           <i className="fas fa-stopwatch stopwatch"></i>
         </div>
-
+          <button onClick={() => props.handleAddToCart()} className="customizeButton">Customize ></button>
       </>}
     </animated.div >,
     ({ style }) => <animated.div style={{ ...style, color: 'lightblue' }}>{<>
@@ -65,7 +65,6 @@ export default function Recipe(props) {
               return <Page key={key} style={props} />
             })}
           </div>
-          <button onClick={() => props.handleAddToCart()} className="customizeButton">Customize ></button>
         </div>
 
 

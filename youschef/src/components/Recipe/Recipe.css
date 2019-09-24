@@ -14,7 +14,7 @@
   background-position: cover;
   background-repeat: no-repeat;
   background-size: auto;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2)
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
 }
 .recipeNameContainer {
   /* border: 1px solid black;
@@ -179,7 +179,7 @@ h5 {
   font-size: 22px;
   letter-spacing: 2.2px;
   border-radius: 70px;
-  background-color: rgba(98, 136, 148, 0.9);
+  background-color: rgb(98, 136, 148);
   height: 44px;
   width: 208px;
   margin-left: 120px;
