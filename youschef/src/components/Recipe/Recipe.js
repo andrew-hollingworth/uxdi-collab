@@ -5,7 +5,10 @@ export default function Recipe() {
   return (
     <div className="recipeContainer">
 
+
     {/* BELOW WILL BE MOVED, JUST FOR NOW */}
+
+    <div className="desktopMainPic"></div>
 
     <div className="progressBarContainer">
       <div className="progressCircle">Select</div>
