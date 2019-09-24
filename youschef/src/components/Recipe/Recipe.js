@@ -47,6 +47,24 @@ export default function Recipe(props) {
 
     </div>
 
+    <div className="ingredientsListContainer">
+      <div className="ingredientsHeader">
+        <h5>Caesar Salad</h5>
+        <i class="fas fa-times"></i>
+      </div>
+      <div className="ingredientsList">
+        <ul className="ingredientsUl">
+          <li className="ingredientsLi">Lettuce</li>
+          <li className="ingredientsLi">Crouton</li>
+          <li className="ingredientsLi">Parmesan</li>
+          <li className="ingredientsLi">Chicken</li>
+          <li className="ingredientsLi">Dressing</li>
+          <li className="ingredientsLi">Anchovies</li>
+        </ul>
+        <button className="customizeIngredientsButton">Add to Cart <span className="plusSign">+</span></button>
+      </div>
+    </div>
+
 
       <button className="scheduleButton">Schedule Delivery</button>
     </div>

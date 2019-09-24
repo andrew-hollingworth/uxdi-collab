@@ -126,12 +126,61 @@
   content: '';
   position: absolute;
   top: 119px;
-  background-color: black;
+  background-color: #628894;
   z-index: -1;
 }
 .desktopMainPic {
   background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569336059/BannerPic_duq5fo.jpg');
   display: none;
+}
+.ingredientsListContainer {
+  border: 1px solid black;
+  height: 230px;
+  width: 330px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  margin: 0;
+}
+.ingredientsHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28px;
+}
+h5 {
+  margin: 0;
+}
+.ingredientsUl {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  flex-wrap:wrap;
+  height: 120px;
+  padding: 0;
+}
+.ingredientsLi {
+  list-style-type: none;
+  margin-left: 20px;
+  font-size: 20px;
+  vertical-align: baseline;
+}
+.ingredientsLi:before {
+  content: url('https://api.iconify.design/ei:minus.svg?flip=horizontal&height=25');
+  margin-right: 5px;
+  vertical-align: baseline;
+}
+.customizeIngredientsButton {
+  color: white;
+  border: none;
+  font-size: 22px;
+  letter-spacing: 2.2px;
+  border-radius: 70px;
+  background-color: rgba(98, 136, 148, 0.9);
+  height: 44px;
+  width: 208px;
+  margin-left: 120px;
+}
+.plusSign {
+  font-size: 25px;
 }
 
 
