@@ -57,6 +57,14 @@
   height: 44px;
   width: 149px;
 }
+.customizeButton:hover {
+  color: rgba(98, 136, 148, 0.9);
+  background-color: white;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
 .scheduleButton {
   border: 1px solid black;
   height: 54px;
@@ -69,6 +77,14 @@
   margin-top: 20px;
   margin-left: 50px;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2)
+}
+.scheduleButton:hover {
+  background-color: white;
+  color: #31464d;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 .chooseIngredients {
   font-size: 24px;
@@ -114,20 +130,37 @@
   z-index: -1;
 }
 .desktopMainPic {
-  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569325215/jason-briscoe-5IGprlBT5g4-unsplash_dhgjfl.jpg');
+  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569336059/BannerPic_duq5fo.jpg');
   display: none;
 }
-
 
 
 @media (min-width: 768px) {
   .desktopMainPic {
     display: block;
-    border: 1px solid black;
-    /* height: 300px; */
-    height: 500px;
+    height: 350px;
     width: 100%;
     background-repeat: no-repeat;
-    background-position: contain;
+    background-position: cover;
+  }
+  .progressBarContainer {
+    max-width: 337px;
+    margin: 36px auto 0 auto;
+  }
+  .progressBarContainer:after {
+    width: 18%;
+    top: 474px;
+    right: 580px;
+  }
+  .recipesContainer {
+    display: flex;
+  }
+  .scheduleButton {
+    /* margin: 0 auto; */
+    /* margin-left: 600px; */
+    margin: 20px auto 20px 600px;
+  }
+  .chooseIngredients {
+    margin-left: 85px;
   }
 }
