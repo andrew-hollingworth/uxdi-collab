@@ -16,8 +16,8 @@ export default function Recipe(props) {
     ({ style }) => <animated.div style={{ ...style, color: 'lightblue' }}>{<>
       <div className="ingredientsListContainer">
         <div className="ingredientsHeader">
-          <h5>Caesar Salad</h5>
-          <i onClick={onClick} class="fas fa-times"></i>
+          <h5 className="recipeName">Caesar Salad</h5>
+          <i onClick={onClick} class="fas fa-times cancel"></i>
         </div>
         <div className="ingredientsList">
           <ul className="ingredientsUl">
