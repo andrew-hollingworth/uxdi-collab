@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.singleRecipeContainer {
+.singleRecipeContainer1 {
   /* border: 1px solid black; */
   position: relative;
   height: 230px;
@@ -16,6 +16,33 @@
   background-size: auto;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
 }
+.singleRecipeContainer2 {
+  /* border: 1px solid black; */
+  position: relative;
+  height: 230px;
+  width: 345px;
+  margin: 0 auto 17px auto;
+  border-radius: 16px;
+  background-image: url('https://files.slack.com/files-pri/T0351JZQ0-FNRG6EQ6A/parm_small.png');
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
+}
+.singleRecipeContainer3 {
+  /* border: 1px solid black; */
+  position: relative;
+  height: 230px;
+  width: 345px;
+  margin: 0 auto 17px auto;
+  border-radius: 16px;
+  background-image: url('https://files.slack.com/files-pri/T0351JZQ0-FNNRTQZJQ/chann_small.png');
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
+}
+
 .recipeNameContainer {
   /* border: 1px solid black;
   margin-top: 15px; */

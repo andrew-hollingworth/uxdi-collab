@@ -10,14 +10,14 @@ export default function Recipe(props) {
           <h3 className="recipeName">Caesar Salad</h3>
           <i className="fas fa-stopwatch stopwatch"></i>
         </div>
-        <button className="customizeButton" onClick={onClick}>Customize ></button>
+        <button className="customizeButton" onClick={ingredientOnClick}>Customize ></button>
       </>}
     </animated.div >,
-    ({ style }) => <animated.div style={{ ...style, color: 'lightblue' }}>{<>
+    ({ style }) => <animated.div style={{ ...style }}>{<>
       <div className="ingredientsListContainer">
         <div className="ingredientsHeader">
           <h5 className="recipeName">Caesar Salad</h5>
-          <i onClick={onClick} class="fas fa-times cancel"></i>
+          <i onClick={ingredientOnClick} className="fas fa-times cancel"></i>
         </div>
         <div className="ingredientsList">
           <ul className="ingredientsUl">
@@ -28,18 +28,17 @@ export default function Recipe(props) {
             <li className="ingredientsLi">Dressing</li>
             <li className="ingredientsLi">Anchovies</li>
           </ul>
-          <button className="customizeIngredientsButton" onClick={() => props.handleAddToCart()}>Add to Cart <span className="plusSign">+</span></button>
+          <button className="customizeIngredientsButton" onClick={() => { props.handleAddToCart(); ingredientOnClick(); }}>Add to Cart <span className="plusSign">+</span></button>
         </div>
       </div>
-
-    </>}</animated.div>
+    </>}</animated.div >
   ]
   const [index, set] = useState(0)
-  const onClick = useCallback(() => set(state => (state + 1) % 2), [])
+  const ingredientOnClick = useCallback(() => set(state => (state + 1) % 2), [])
   const transitions = useTransition(index, p => p, {
-    from: { opacity: 0, transform: 'translate3d(0%,0px,0)' },
+    from: { opacity: 0, transform: 'translate3d(0%,200px,0)' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    leave: { opacity: 0, transform: 'translate3d(0%,0px,0)' },
+    leave: { opacity: 0, transform: 'translate3d(0%,200px,0)' },
   })
   return (
     <div className="recipeContainer">
@@ -58,8 +57,8 @@ export default function Recipe(props) {
 
       <h2 className="chooseIngredients">Choose Your Ingredients:</h2>
       <div className="recipesContainer">
-        <div className="singleRecipeContainer" onClick={onClick}>
-          <div className="simple-trans-main" onClick={onClick}>
+        <div className="singleRecipeContainer1" onClick={ingredientOnClick}>
+          <div className="simple-trans-main" onClick={ingredientOnClick}>
             {transitions.map(({ item, props, key }) => {
               const Page = pages[item]
               return <Page key={key} style={props} />
@@ -70,21 +69,21 @@ export default function Recipe(props) {
 
 
         {/* BELOW IS SECOND RECIPE CONTAINER */}
-        <div className="singleRecipeContainer">
+        <div className="singleRecipeContainer2">
           <div className="recipeNameContainer">
             <h3 className="recipeName">Chicken Parm</h3>
             <i className="fas fa-stopwatch stopwatch"></i>
           </div>
-          <button onClick={() => props.handleAddToCart()} className="customizeButton">Customize ></button>
+          <button className="customizeButton">Customize ></button>
         </div>
 
         {/* BELOW IS THIRD RECIPE CONTAINER */}
-        <div className="singleRecipeContainer">
+        <div className="singleRecipeContainer3">
           <div className="recipeNameContainer">
             <h3 className="recipeName">Channa Masala</h3>
             <i className="fas fa-stopwatch stopwatch"></i>
           </div>
-          <button onClick={() => props.handleAddToCart()} className="customizeButton">Customize ></button>
+          <button className="customizeButton">Customize ></button>
         </div>
       </div>
 
