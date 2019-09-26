@@ -97,7 +97,7 @@ export default function Recipe(props) {
       <>
         <div className="ingredientsListContainer">
           <div className="ingredientsHeader">
-            <h5 className="recipeName">Chicken Parm</h5>
+            <h5 className="recipeName">Chana Masala</h5>
             <i onClick={chanaIngredientOnClick} className="fas fa-times cancel"></i>
           </div>
           <div className="ingredientsList">
@@ -140,7 +140,7 @@ export default function Recipe(props) {
       <h2 className="chooseIngredients">Choose Your Ingredients:</h2>
 
       <div className="recipesContainer">
-        <div className="singleRecipeContainer1" onClick={caesarIngredientOnClick}>
+        <div className="singleRecipeContainer caesar" onClick={caesarIngredientOnClick}>
           <div className="simple-trans-main" onClick={caesarIngredientOnClick}>
             {transitions.map(({ item, props, key }) => {
               const Caesarpage = caesarPages[item]
@@ -152,7 +152,7 @@ export default function Recipe(props) {
 
 
         {/* BELOW IS SECOND RECIPE CONTAINER */}
-        <div className="singleRecipeContainer2" onClick={parmIngredientOnClick}>
+        <div className="singleRecipeContainer parm" onClick={parmIngredientOnClick}>
           <div className="simple-trans-main" onClick={parmIngredientOnClick}>
             {parmTransitions.map(({ item, props, key }) => {
               const Parmpage = parmPages[item]
@@ -162,7 +162,7 @@ export default function Recipe(props) {
         </div>
 
         {/* BELOW IS THIRD RECIPE CONTAINER */}
-        <div className="singleRecipeContainer3" onClick={chanaIngredientOnClick}>
+        <div className="singleRecipeContainer chana" onClick={chanaIngredientOnClick}>
           <div className="simple-trans-main" onClick={chanaIngredientOnClick}>
             {chanaTransitions.map(({ item, props, key }) => {
               const Chanapage = chanaPages[item]
@@ -170,9 +170,8 @@ export default function Recipe(props) {
             })}
           </div>
         </div>
-
-        <button className="scheduleButton">Schedule Delivery</button>
       </div>
+      <button className="scheduleButton">Schedule Delivery</button>
     </div>
   )
 }
