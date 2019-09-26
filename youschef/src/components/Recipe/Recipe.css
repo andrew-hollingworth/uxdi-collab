@@ -10,12 +10,23 @@
   width: 345px;
   margin: 0 auto 17px auto;
   border-radius: 16px;
-  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569277230/CaesarSaladSmall_hnuz49.jpg');
   background-position: cover;
   background-repeat: no-repeat;
   background-size: auto;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
 }
+.caesar {
+  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1569277230/CaesarSaladSmall_hnuz49.jpg');
+}
+
+.chana {
+  background-image: url('https://i.imgur.com/3dud5Pm.png');
+}
+
+.parm {
+  background-image: url('https://i.imgur.com/LMoRELG.png');
+}
+
 .recipeNameContainer {
   /* border: 1px solid black;
   margin-top: 15px; */

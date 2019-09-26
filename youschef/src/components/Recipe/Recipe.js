@@ -3,21 +3,22 @@ import { useTransition, animated } from 'react-spring'
 import './Recipe.css'
 
 export default function Recipe(props) {
-  const pages = [
+  // CAESAR IMAGE
+  const caesarPages = [
     ({ style }) => <animated.div>
       {<>
         <div className="recipeNameContainer">
           <h3 className="recipeName">Caesar Salad</h3>
           <i className="fas fa-stopwatch stopwatch"></i>
         </div>
-        <button className="customizeButton" onClick={onClick}>Customize ></button>
+        <button className="customizeButton" onClick={caesarIngredientOnClick}>Customize ></button>
       </>}
     </animated.div >,
-    ({ style }) => <animated.div style={{ ...style, color: 'lightblue' }}>{<>
+    ({ style }) => <animated.div style={{ ...style }}>{<>
       <div className="ingredientsListContainer">
         <div className="ingredientsHeader">
           <h5 className="recipeName">Caesar Salad</h5>
-          <i onClick={onClick} class="fas fa-times cancel"></i>
+          <i onClick={caesarIngredientOnClick} className="fas fa-times cancel"></i>
         </div>
         <div className="ingredientsList">
           <ul className="ingredientsUl">
@@ -28,19 +29,99 @@ export default function Recipe(props) {
             <li className="ingredientsLi">Dressing</li>
             <li className="ingredientsLi">Anchovies</li>
           </ul>
-          <button className="customizeIngredientsButton" onClick={() => props.handleAddToCart()}>Add to Cart <span className="plusSign">+</span></button>
+          <button className="customizeIngredientsButton" onClick={() => { props.handleAddToCart(); caesarIngredientOnClick(); }}>Add to Cart <span className="plusSign">+</span></button>
         </div>
       </div>
-
-    </>}</animated.div>
+    </>}</animated.div >
   ]
   const [index, set] = useState(0)
-  const onClick = useCallback(() => set(state => (state + 1) % 2), [])
+  const caesarIngredientOnClick = useCallback(() => set(state => (state + 1) % 2), [])
   const transitions = useTransition(index, p => p, {
-    from: { opacity: 0, transform: 'translate3d(0%,0px,0)' },
+    from: { opacity: 0, transform: 'translate3d(0%,200px,0)' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    leave: { opacity: 0, transform: 'translate3d(0%,0px,0)' },
+    leave: { opacity: 0, transform: 'translate3d(0%,200px,0)' },
   })
+
+  // CHICKEN PARM =============================
+  const parmPages = [
+    ({ style }) => <animated.div>
+      {<>
+        <div className="recipeNameContainer">
+          <h3 className="recipeName">Chicken Parm</h3>
+          <i className="fas fa-stopwatch stopwatch"></i>
+        </div>
+        <button className="customizeButton" onClick={parmIngredientOnClick}>Customize ></button>
+      </>}
+    </animated.div >,
+    ({ style }) => <animated.div style={{ ...style }}>{
+      <>
+        <div className="ingredientsListContainer">
+          <div className="ingredientsHeader">
+            <h5 className="recipeName">Chicken Parm</h5>
+            <i onClick={parmIngredientOnClick} className="fas fa-times cancel"></i>
+          </div>
+          <div className="ingredientsList">
+            <ul className="ingredientsUl">
+              <li className="ingredientsLi">Spaghetti</li>
+              <li className="ingredientsLi">Parmesan</li>
+              <li className="ingredientsLi">Breadcrumbs</li>
+              <li className="ingredientsLi">Chicken</li>
+              <li className="ingredientsLi">Sauce</li>
+            </ul>
+            <button className="customizeIngredientsButton" onClick={() => { props.handleAddToCart(); parmIngredientOnClick(); }}>Add to Cart <span className="plusSign">+</span></button>
+          </div>
+        </div>
+      </>
+    }</animated.div >
+  ]
+  const [parmindex, parmset] = useState(0)
+  const parmIngredientOnClick = useCallback(() => parmset(state => (state + 1) % 2), [])
+  const parmTransitions = useTransition(parmindex, p => p, {
+    from: { opacity: 0, transform: 'translate3d(0%,200px,0)' },
+    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
+    leave: { opacity: 0, transform: 'translate3d(0%,200px,0)' },
+  })
+
+  // CHANA MASALA =============================
+  const chanaPages = [
+    ({ style }) => <animated.div>
+      {<>
+        <div className="recipeNameContainer">
+          <h3 className="recipeName">Chana Masala</h3>
+          <i className="fas fa-stopwatch stopwatch"></i>
+        </div>
+        <button className="customizeButton" onClick={chanaIngredientOnClick}>Customize ></button>
+      </>}
+    </animated.div >,
+    ({ style }) => <animated.div style={{ ...style }}>{
+      <>
+        <div className="ingredientsListContainer">
+          <div className="ingredientsHeader">
+            <h5 className="recipeName">Chana Masala</h5>
+            <i onClick={chanaIngredientOnClick} className="fas fa-times cancel"></i>
+          </div>
+          <div className="ingredientsList">
+            <ul className="ingredientsUl">
+              <li className="ingredientsLi">Chickpeas</li>
+              <li className="ingredientsLi">Garam Masala</li>
+              <li className="ingredientsLi">Extra Spices</li>
+              <li className="ingredientsLi">Tomato</li>
+              <li className="ingredientsLi">Onion</li>
+            </ul>
+            <button className="customizeIngredientsButton" onClick={() => { props.handleAddToCart(); chanaIngredientOnClick(); }}>Add to Cart <span className="plusSign">+</span></button>
+          </div>
+        </div>
+      </>
+    }</animated.div >
+  ]
+  const [chanaindex, chanaset] = useState(0)
+  const chanaIngredientOnClick = useCallback(() => chanaset(state => (state + 1) % 2), [])
+  const chanaTransitions = useTransition(chanaindex, p => p, {
+    from: { opacity: 0, transform: 'translate3d(0%,200px,0)' },
+    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
+    leave: { opacity: 0, transform: 'translate3d(0%,200px,0)' },
+  })
+
   return (
     <div className="recipeContainer">
 
@@ -57,12 +138,13 @@ export default function Recipe(props) {
 
 
       <h2 className="chooseIngredients">Choose Your Ingredients:</h2>
+
       <div className="recipesContainer">
-        <div className="singleRecipeContainer" onClick={onClick}>
-          <div className="simple-trans-main" onClick={onClick}>
+        <div className="singleRecipeContainer caesar" onClick={caesarIngredientOnClick}>
+          <div className="simple-trans-main" onClick={caesarIngredientOnClick}>
             {transitions.map(({ item, props, key }) => {
-              const Page = pages[item]
-              return <Page key={key} style={props} />
+              const Caesarpage = caesarPages[item]
+              return <Caesarpage key={key} style={props} />
             })}
           </div>
         </div>
@@ -70,24 +152,25 @@ export default function Recipe(props) {
 
 
         {/* BELOW IS SECOND RECIPE CONTAINER */}
-        <div className="singleRecipeContainer">
-          <div className="recipeNameContainer">
-            <h3 className="recipeName">Chicken Parm</h3>
-            <i className="fas fa-stopwatch stopwatch"></i>
+        <div className="singleRecipeContainer parm" onClick={parmIngredientOnClick}>
+          <div className="simple-trans-main" onClick={parmIngredientOnClick}>
+            {parmTransitions.map(({ item, props, key }) => {
+              const Parmpage = parmPages[item]
+              return <Parmpage key={key} style={props} />
+            })}
           </div>
-          <button onClick={() => props.handleAddToCart()} className="customizeButton">Customize ></button>
         </div>
 
         {/* BELOW IS THIRD RECIPE CONTAINER */}
-        <div className="singleRecipeContainer">
-          <div className="recipeNameContainer">
-            <h3 className="recipeName">Channa Masala</h3>
-            <i className="fas fa-stopwatch stopwatch"></i>
+        <div className="singleRecipeContainer chana" onClick={chanaIngredientOnClick}>
+          <div className="simple-trans-main" onClick={chanaIngredientOnClick}>
+            {chanaTransitions.map(({ item, props, key }) => {
+              const Chanapage = chanaPages[item]
+              return <Chanapage key={key} style={props} />
+            })}
           </div>
-          <button onClick={() => props.handleAddToCart()} className="customizeButton">Customize ></button>
         </div>
       </div>
-
       <button className="scheduleButton">Schedule Delivery</button>
     </div>
   )
