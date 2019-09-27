@@ -11,7 +11,7 @@ export default function Recipe(props) {
           <h3 className="recipeName">Caesar Salad</h3>
           <i className="fas fa-stopwatch stopwatch"></i>
         </div>
-        <button className="customizeButton" onClick={caesarIngredientOnClick}>Customize ></button>
+        <button className="customizeButton" onClick={caesarIngredientOnClick}>Customize <i className="fas fa-chevron-right"></i></button>
       </>}
     </animated.div >,
     ({ style }) => <animated.div style={{ ...style }}>{<>
@@ -50,7 +50,7 @@ export default function Recipe(props) {
           <h3 className="recipeName">Chicken Parm</h3>
           <i className="fas fa-stopwatch stopwatch"></i>
         </div>
-        <button className="customizeButton" onClick={parmIngredientOnClick}>Customize ></button>
+        <button className="customizeButton" onClick={parmIngredientOnClick}>Customize <i className="fas fa-chevron-right"></i></button>
       </>}
     </animated.div >,
     ({ style }) => <animated.div style={{ ...style }}>{
@@ -90,7 +90,7 @@ export default function Recipe(props) {
           <h3 className="recipeName">Chana Masala</h3>
           <i className="fas fa-stopwatch stopwatch"></i>
         </div>
-        <button className="customizeButton" onClick={chanaIngredientOnClick}>Customize ></button>
+        <button className="customizeButton" onClick={chanaIngredientOnClick}>Customize <i className="fas fa-chevron-right"></i></button>
       </>}
     </animated.div >,
     ({ style }) => <animated.div style={{ ...style }}>{
