@@ -4,7 +4,6 @@
 }
 
 .singleRecipeContainer {
-  /* border: 1px solid black; */
   position: relative;
   height: 230px;
   width: 345px;
@@ -17,8 +16,6 @@
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
 }
 .recipeNameContainer {
-  /* border: 1px solid black;
-  margin-top: 15px; */
   position: absolute;
   right: 0;
   margin-top: 15px;
@@ -44,7 +41,6 @@
   margin-top: 5px;
 }
 .customizeButton {
-  /* border: 1px solid red; */
   color: white;
   border: none;
   font-size: 18px;
@@ -185,6 +181,7 @@ h5 {
   margin-left: 118px;
   position: absolute;
   bottom: 7px;
+  cursor: pointer;
 }
 .plusSign {
   font-size: 25px;
